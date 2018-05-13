@@ -3,12 +3,12 @@ from rest_framework import viewsets
 from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
 
 
-class userViewSet(viewsets.ModelViewSet):
-    queryset = user.objecst.all().order_by('date_joined')
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all().order_by('date_joined')
     serializer_class = UserSerializer
 
 
-class userViewSet(viewsets.ModelViewSet):
-    queryset = Group.objecst.all()
+class GroupViewSet(viewsets.ModelViewSet):
+    queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
